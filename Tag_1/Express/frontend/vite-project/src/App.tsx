@@ -9,7 +9,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchDataPeople = async () => {
-			const response = await axios.get("http://localhost:4000/people");
+			const response = await axios.get("http://localhost:3000/people");
 			console.log(response.data);
 			setSWCharacters(response.data);
 		};
@@ -18,7 +18,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchDataShips = async () => {
-			const response = await axios.get("http://localhost:4000/starships");
+			const response = await axios.get("http://localhost:3000/starships");
 			console.log(response.data);
 			setSWShip(response.data);
 		};

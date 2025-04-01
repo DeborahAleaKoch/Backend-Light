@@ -3,8 +3,11 @@ import express from "express";
 import { IPerson } from "../frontend/vite-project/src/models/IPerson";
 import { IStarship } from "../frontend/vite-project/src/models/IStarship";
 
+import cors from "cors";
 const app = express();
-const port = 4000;
+app.use(cors());
+
+const port = 3000;
 
 const people: IPerson[] = [
 	{ id: 1, name: "Luke Skywalker" },

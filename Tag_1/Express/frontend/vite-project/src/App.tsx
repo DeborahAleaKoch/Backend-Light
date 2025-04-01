@@ -16,6 +16,8 @@ function App() {
 		fetchDataPeople();
 	}, []);
 
+	console.log("hej hej hej");
+
 	useEffect(() => {
 		const fetchDataShips = async () => {
 			const response = await axios.get("http://localhost:3000/starships");
@@ -27,8 +29,11 @@ function App() {
 
 	return (
 		<>
-			{SWCharacters && SWCharacters.map((character) => <p>{character.name}</p>)}
-			{SWShip && SWShip.map((ship) => <p>{ship.name}</p>)}
+			{SWCharacters &&
+				SWCharacters.map((character) => (
+					<p key={character.id}>{character.name}</p>
+				))}
+			{SWShip && SWShip.map((ship) => <p key={ship.id}>{ship.name}</p>)}
 		</>
 	);
 }

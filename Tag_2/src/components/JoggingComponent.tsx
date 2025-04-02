@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { runDistance, warmUp, coolDown } from "../jogging";
+import { runDistance, warmUp, coolDown } from "../functions/jogging";
 
 const JoggingComponent: React.FC = () => {
 	const [distanceDescription, setDistanceDescription] = useState<string>("");
